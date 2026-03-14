@@ -1,0 +1,111 @@
+.admin-header{
+  margin-bottom: 20px;
+}
+
+.admin-header h1{
+  margin-bottom: 8px;
+  color: #143d73;
+}
+
+.admin-header p{
+  color: #555;
+}
+
+.admin-contenedor h2{
+  margin-bottom: 15px;
+  color: #1f5fae;
+}
+
+
+.admin-contenedor{
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.admin-contenedor h1{
+  color: #143d73;
+  margin-bottom: 10px;
+}
+
+.form-admin{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.form-admin input,
+.form-admin select,
+.form-admin textarea{
+  padding: 12px;
+  border: 1px solid #cfd8e3;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.form-admin button{
+  background: #1f5fae;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-admin button:hover{
+  background: #143d73;
+}
+
+.check-oferta{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mensaje{
+  margin-top: 15px;
+  font-weight: bold;
+  color: #143d73;
+}
+
+
+.admin-header{
+  margin-bottom: 20px;
+}
+
+.admin-header h1{
+  margin-bottom: 8px;
+  color: #143d73;
+}
+
+.admin-header p{
+  color: #555;
+}
+
+.admin-contenedor h2{
+  margin-bottom: 15px;
+  color: #1f5fae;
+}
+
+.preview{
+  margin-top: 10px;
+  text-align: left;
+}
+
+.preview img{
+  width: 180px;
+  max-width: 100%;
+  border-radius: 10px;
+  border: 1px solid #d6deeb;
+  margin-top: 8px;
+}
+
+.label-file{
+  font-weight: bold;
+  color: #143d73;
+}

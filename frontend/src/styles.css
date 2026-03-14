@@ -1,0 +1,23 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background: #f7f9fc;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+body{
+  margin: 0;
+  background: linear-gradient(
+    180deg,
+    #bf70ff 0%,
+    #bf70ff 40%,
+    #90ffff 100%
+  );
+}

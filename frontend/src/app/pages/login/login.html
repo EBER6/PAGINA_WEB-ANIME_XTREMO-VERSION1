@@ -1,0 +1,53 @@
+<div class="login-contenedor">
+
+  <!-- LOGO PRINCIPAL -->
+  <div class="logo-principal">
+    ANIME XTREMO
+  </div>
+
+  <!-- LOGIN -->
+  <div class="wrapper">
+
+    <h1>Login</h1>
+
+    <form (ngSubmit)="ingresar()">
+
+      <!-- CORREO -->
+      <div class="input-box">
+        <input
+          type="email"
+          placeholder="Correo"
+          [(ngModel)]="correo"
+          name="correo"
+          required
+        >
+        <i class='bx bxs-user'></i>
+      </div>
+
+      <!-- CONTRASEÑA -->
+      <div class="input-box">
+        <input
+          type="password"
+          placeholder="Contraseña"
+          [(ngModel)]="password"
+          name="password"
+          required
+        >
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+
+      <!-- BOTON -->
+      <button type="submit" class="btn">
+        Login
+      </button>
+
+      <!-- MENSAJE ERROR -->
+      <p class="mensaje-error" *ngIf="mensaje">
+        {{ mensaje }}
+      </p>
+
+    </form>
+
+  </div>
+
+</div>

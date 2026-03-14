@@ -1,0 +1,81 @@
+.navbar{
+  background: #111111;
+  color: white;
+  padding: 16px 24px;
+  position: relative;
+}
+
+.navbar-superior{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo{
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+  color: #6ea8ff;
+  text-shadow: 2px 2px 0 #143d73;
+}
+
+.menu{
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.menu a,
+.menu-mobile a{
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.menu a:hover,
+.menu-mobile a:hover{
+  color: #6ea8ff;
+}
+
+.menu-btn{
+  display: none;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.menu-mobile{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.activo{
+  color: #6ea8ff;
+}
+
+/* Tablet y celular */
+@media (max-width: 768px){
+  .logo{
+    font-size: 24px;
+  }
+
+  .escritorio{
+    display: none;
+  }
+
+  .menu-btn{
+    display: block;
+  }
+
+  .navbar{
+    padding: 14px 18px;
+  }
+}

@@ -1,0 +1,230 @@
+.catalogo-hero{
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.58), rgba(20,61,115,0.38)),
+    url('/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.catalogo-hero-contenido{
+  color: white;
+  padding: 20px;
+}
+
+.catalogo-hero-contenido h1{
+  margin: 0 0 10px;
+  font-size: 56px;
+  font-weight: 900;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.7);
+}
+
+.catalogo-hero-contenido p{
+  margin: 0;
+  font-size: 20px;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.8);
+}
+
+.catalogo-contenedor{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 35px 20px 70px;
+}
+
+.catalogo-buscador{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.catalogo-buscador input{
+  width: 100%;
+  max-width: 520px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid #cfd8e3;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.catalogo-filtros{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.catalogo-filtros button{
+  border: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #e8eef8;
+  color: #143d73;
+  font-weight: 800;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+
+.catalogo-filtros button:hover{
+  background: #d9e5f7;
+}
+
+.catalogo-filtros button.activo{
+  background: linear-gradient(135deg,#2f7ae5,#143d73);
+  color: white;
+}
+
+.catalogo-info{
+  text-align: center;
+  margin-bottom: 25px;
+  color: #374151;
+}
+
+.catalogo-productos{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.catalogo-card{
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border: 1px solid #e6edf7;
+  transition: 0.3s;
+}
+
+.catalogo-card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.14);
+}
+
+.catalogo-card-img{
+  position: relative;
+  background: #f8fbff;
+  padding: 18px;
+  text-align: center;
+}
+
+.catalogo-card-img img{
+  width: 100%;
+  max-width: 160px;
+  height: 160px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.oferta-badge{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #e11d48;
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 7px 12px;
+  border-radius: 999px;
+}
+
+.catalogo-card-body{
+  padding: 18px 16px 20px;
+  text-align: center;
+}
+
+.catalogo-card-body h3{
+  font-size: 20px;
+  color: #143d73;
+  margin: 0 0 8px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.categoria{
+  margin: 0 0 10px;
+  color: #6b7280;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.precio{
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0 0 14px;
+  color: #111827;
+}
+
+.catalogo-card-body button{
+  width: 100%;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: linear-gradient(135deg,#2f7ae5,#143d73);
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.catalogo-card-body button:hover{
+  transform: translateY(-2px);
+}
+
+.sin-resultados{
+  text-align: center;
+  padding: 40px 20px;
+  color: #555;
+  font-size: 20px;
+}
+
+@media (max-width: 1450px){
+  .catalogo-productos{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1150px){
+  .catalogo-productos{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .catalogo-hero-contenido h1{
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 800px){
+  .catalogo-productos{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .catalogo-hero-contenido h1{
+    font-size: 34px;
+  }
+
+  .catalogo-hero-contenido p{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 520px){
+  .catalogo-productos{
+    grid-template-columns: 1fr;
+  }
+}

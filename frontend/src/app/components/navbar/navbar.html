@@ -1,0 +1,37 @@
+<nav class="navbar">
+  <div class="navbar-superior">
+    <h2 class="logo">ANIME XTREMO</h2>
+
+    <button class="menu-btn" (click)="toggleMenu()">
+      ☰
+    </button>
+
+    <div class="menu escritorio">
+      <a routerLink="/" routerLinkActive="activo">Inicio</a>
+      <a routerLink="/catalogo" routerLinkActive="activo">Catálogo</a>
+      <a routerLink="/ofertas" routerLinkActive="activo">Ofertas</a>
+      <a routerLink="/carrito" routerLinkActive="activo">🛒 Carrito</a>
+      <a routerLink="/contacto" routerLinkActive="activo">Contacto</a>
+
+      <a *ngIf="!authService.estaLogueado()" routerLink="/login" routerLinkActive="activo">Login</a>
+
+      <a *ngIf="authService.estaLogueado()" routerLink="/admin" routerLinkActive="activo">Admin</a>
+      <a *ngIf="authService.estaLogueado()" href="#" (click)="logout(); $event.preventDefault()">Cerrar sesión</a>
+    </div>
+  </div>
+
+  @if (menuAbierto) {
+    <div class="menu-mobile">
+      <a routerLink="/" (click)="cerrarMenu()">Inicio</a>
+      <a routerLink="/catalogo" (click)="cerrarMenu()">Catálogo</a>
+      <a routerLink="/ofertas" (click)="cerrarMenu()">Ofertas</a>
+      <a routerLink="/carrito" (click)="cerrarMenu()">🛒 Carrito</a>
+      <a routerLink="/contacto" (click)="cerrarMenu()">Contacto</a>
+
+      <a *ngIf="!authService.estaLogueado()" routerLink="/login" (click)="cerrarMenu()">Login</a>
+
+      <a *ngIf="authService.estaLogueado()" routerLink="/admin" (click)="cerrarMenu()">Admin</a>
+      <a *ngIf="authService.estaLogueado()" href="#" (click)="logout(); $event.preventDefault()">Cerrar sesión</a>
+    </div>
+  }
+</nav>

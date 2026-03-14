@@ -1,0 +1,56 @@
+<section class="catalogo-hero">
+  <div class="catalogo-hero-contenido">
+    <h1>CATÁLOGO ANIME XTREMO</h1>
+    <p>Encuentra figuras, polos y accesorios otaku en un solo lugar.</p>
+  </div>
+</section>
+
+<section class="catalogo-contenedor">
+
+  <div class="catalogo-buscador">
+    <input
+      type="text"
+      placeholder="Buscar producto..."
+      [(ngModel)]="busqueda"
+      (input)="filtrarProductos()"
+    >
+  </div>
+
+  <div class="catalogo-filtros">
+    <button
+      *ngFor="let categoria of categorias"
+      (click)="seleccionarCategoria(categoria)"
+      [class.activo]="categoriaSeleccionada === categoria"
+    >
+      {{ categoria }}
+    </button>
+  </div>
+
+  <div class="catalogo-info">
+    <p>Resultados: <strong>{{ productosFiltrados.length }}</strong></p>
+  </div>
+
+  <div class="catalogo-productos" *ngIf="productosFiltrados.length > 0">
+    <div class="catalogo-card" *ngFor="let p of productosFiltrados">
+      <div class="catalogo-card-img">
+        <img [src]="getImagenUrl(p.imagen)" [alt]="p.nombre">
+        <span class="oferta-badge" *ngIf="p.oferta">OFERTA</span>
+      </div>
+
+      <div class="catalogo-card-body">
+        <h3>{{ p.nombre }}</h3>
+        <p class="categoria">{{ p.categoria }}</p>
+        <p class="precio">S/ {{ p.precio }}</p>
+
+        <button (click)="agregar(p.nombre, p.precio, p.imagen)">
+          Agregar al carrito
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="sin-resultados" *ngIf="productosFiltrados.length === 0">
+    <p>No se encontraron productos.</p>
+  </div>
+
+</section>

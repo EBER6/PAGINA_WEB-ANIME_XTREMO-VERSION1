@@ -1,0 +1,67 @@
+<div class="admin-contenedor">
+  <div class="admin-header">
+    <h1>Panel Administrador</h1>
+    <p>Bienvenido al modo administrador de Anime Xtremo</p>
+  </div>
+
+  <h2>Agregar nuevo producto</h2>
+
+  <form (ngSubmit)="guardarProducto()" class="form-admin">
+    <input
+      type="text"
+      placeholder="Nombre del producto"
+      [(ngModel)]="producto.nombre"
+      name="nombre"
+      required
+    >
+
+    <input
+      type="number"
+      placeholder="Precio"
+      [(ngModel)]="producto.precio"
+      name="precio"
+      required
+    >
+
+    <select [(ngModel)]="producto.categoria" name="categoria" required>
+      <option value="">Seleccione categoría</option>
+      <option value="figuras">Figuras</option>
+      <option value="polos">Polos</option>
+      <option value="accesorios">Accesorios</option>
+      <option value="posters">Posters</option>
+      <option value="llaveros">Llaveros</option>
+    </select>
+
+    <textarea
+      placeholder="Descripción"
+      [(ngModel)]="producto.descripcion"
+      name="descripcion"
+      rows="4"
+    ></textarea>
+
+    <label class="check-oferta">
+      <input
+        type="checkbox"
+        [(ngModel)]="producto.oferta"
+        name="oferta"
+      >
+      Producto en oferta
+    </label>
+
+    <label class="label-file">Seleccionar imagen del producto</label>
+    <input
+      type="file"
+      accept="image/*"
+      (change)="seleccionarImagen($event)"
+    >
+
+    <div class="preview" *ngIf="previewImagen">
+      <p>Vista previa:</p>
+      <img [src]="previewImagen" alt="Vista previa">
+    </div>
+
+    <button type="submit">Guardar producto</button>
+  </form>
+
+  <p class="mensaje">{{ mensaje }}</p>
+</div>

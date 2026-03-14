@@ -1,0 +1,24 @@
+<div class="contenedor-carrito">
+  <h1 class="titulo-carrito">🛒 Carrito de compras</h1>
+
+  <div *ngIf="productos.length === 0">
+    <p class="vacio">No hay productos en el carrito</p>
+  </div>
+
+  <div class="carrito-lista" *ngIf="productos.length > 0">
+    <div class="producto-carrito" *ngFor="let p of productos; let i = index">
+      <img [src]="getImagenUrl(p.imagen)" [alt]="p.nombre">
+      <h3>{{ p.nombre }}</h3>
+      <p>Precio: S/ {{ p.precio }}</p>
+
+      <div class="botones-carrito">
+        <button (click)="eliminar(i)">Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="acciones" *ngIf="productos.length > 0">
+    <button (click)="vaciar()">Vaciar carrito</button>
+    <button (click)="enviarWhatsApp()">Enviar pedido por WhatsApp</button>
+  </div>
+</div>

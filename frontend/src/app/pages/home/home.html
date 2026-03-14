@@ -1,0 +1,34 @@
+<div class="contenedor">
+
+  <section class="banner">
+    <div class="banner-texto">
+      <h1>BIENVENIDOS A ANIME XTREMO</h1>
+      <p>La mejor tienda otaku con figuras, polos y accesorios de anime.</p>
+
+      <div class="botones-banner">
+        <a routerLink="/catalogo" class="btn-banner">Ver catálogo</a>
+        <a routerLink="/ofertas" class="btn-banner oferta">Ofertas</a>
+      </div>
+    </div>
+  </section>
+
+  <p class="descripcion">
+    Las mejores figuras, polos y accesorios de anime.
+  </p>
+
+  <h2>PRODUCTOS DESTACADOS</h2>
+
+  <div class="productos">
+  <div class="producto" *ngFor="let p of productos">
+    <img [src]="getImagenUrl(p.imagen)" [alt]="p.nombre">
+    <h3>{{ p.nombre }}</h3>
+    <p>S/ {{ p.precio }}</p>
+    <button (click)="agregar(p.nombre, p.precio, p.imagen)">
+      Agregar al carrito
+    </button>
+  </div>
+</div>
+
+</div>
+
+
