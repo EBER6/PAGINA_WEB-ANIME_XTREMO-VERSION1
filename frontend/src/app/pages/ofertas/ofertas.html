@@ -1,1 +1,32 @@
-<p>ofertas works!</p>
+<section class="ofertas-hero">
+  <div class="ofertas-hero-texto">
+    <h1>PRODUCTOS EN OFERTA</h1>
+    <p>APROVECHA LAS MEJORES OFERTAS DE ANIME XTREMO</p>
+  </div>
+</section>
+
+<div class="ofertas-contenedor">
+
+  <p class="descripcion">
+    AQUI ENCONTRARAS TODOS LOS PRODUCTOS QUE ACTUALMENTE ESTAN EN OFERTA
+  </p>
+
+  <div class="productos" *ngIf="ofertas.length > 0">
+    <div class="producto" *ngFor="let p of ofertas">
+      <div class="etiqueta-oferta">OFERTA</div>
+
+      <img [src]="getImagenUrl(p.imagen)" [alt]="p.nombre">
+
+      <h3>{{ p.nombre }}</h3>
+      <p>S/ {{ p.precio }}</p>
+
+      <button (click)="agregar(p.nombre, p.precio, p.imagen)">
+        Agregar al carrito
+      </button>
+    </div>
+  </div>
+
+  <div class="sin-ofertas" *ngIf="ofertas.length === 0">
+    <p>NO HAY PRODUCTOS EN OFERTA POR AHORA</p>
+  </div>
+</div>

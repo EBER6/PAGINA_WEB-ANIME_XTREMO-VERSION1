@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  private adminEmail = 'admin@animextremo.com';
+  private adminEmail = 'admin';
   private adminPassword = '123456';
 
   login(correo: string, password: string): boolean {

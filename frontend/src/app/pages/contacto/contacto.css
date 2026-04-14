@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* HERO */
+.contacto-hero {
+  background: linear-gradient(135deg, #111, #ff3c00);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contacto-hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* CONTENEDOR */
+.contacto-contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 40px;
+}
+
+/* CARDS */
+.info-card {
+  background: #111;
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.info-card h2 {
+  margin-bottom: 15px;
+}
+
+/* MAPA */
+.mapa iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* FORMULARIO */
+.contacto-formulario {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: #ff3c00;
+  outline: none;
+}
+
+/* BOTÓN */
+button {
+  width: 100%;
+  background: #ff3c00;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #e63200;
+}
+
+/* WHATSAPP */
+.btn-whatsapp {
+  display: block;
+  margin-top: 15px;
+  padding: 12px;
+  background: #25D366;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+}
+
+/* MENSAJE */
+.mensaje-exito {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contacto-contenedor {
+    grid-template-columns: 1fr;
+  }
+}

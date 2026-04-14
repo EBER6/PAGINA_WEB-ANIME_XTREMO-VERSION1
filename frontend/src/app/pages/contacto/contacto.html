@@ -1,1 +1,81 @@
-<p>contacto works!</p>
+<section class="contacto-hero">
+  <div class="contacto-hero-texto">
+    <h1>CONTÁCTANOS</h1>
+    <p>ESTAMOS LISTOS PARA AYUDARTE CON TUS PEDIDOS Y CONSULTAS</p>
+  </div>
+</section>
+<div class="contacto-contenedor">
+  <div class="contacto-info">
+    <div class="info-card">
+      <h2>INFORMACION DE CONTACTO</h2>
+      <p><strong>WHATSAPP:</strong> +51 999 999 999</p>
+      <p><strong>CORREO:</strong> animextremo@gmail.com</p>
+      <p><strong>UBICACION:</strong> AYACUCHO - PASAJE LA CULTURA 180</p>
+      <p><strong>INSTAGRAM:</strong> @anime_xtremo</p>
+      <p><strong>FACEBOOK:</strong> Anime Xtremo</p>
+
+      <!-- BOTÓN WHATSAPP -->
+      <a 
+        href="https://wa.me/51957682140?text=Hola,%20quiero%20información"
+        target="_blank"
+        class="btn-whatsapp"
+      >
+        ESCRIBENOS POR WHATSAPP
+      </a>
+    </div>
+
+    <!-- MAPA -->
+    <div class="info-card mapa">
+      <h2>Ubicación</h2>
+      <iframe
+        src="https://www.google.com/maps?q=Ayacucho,+Peru&output=embed"
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+
+  <!-- FORMULARIO -->
+  <div class="contacto-formulario">
+    <h2>Envíanos un mensaje</h2>
+
+    <form (ngSubmit)="enviarFormulario()" class="formulario">
+
+      <input
+        type="text"
+        placeholder="Tu nombre"
+        [(ngModel)]="nombre"
+        name="nombre"
+        required
+        minlength="3"
+      >
+
+      <input
+        type="email"
+        placeholder="Tu correo"
+        [(ngModel)]="correo"
+        name="correo"
+        required
+      >
+
+      <textarea
+        placeholder="Escribe tu mensaje"
+        [(ngModel)]="mensaje"
+        name="mensaje"
+        rows="6"
+        required
+        minlength="10"
+      ></textarea>
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+
+    <p 
+      class="mensaje-exito" 
+      *ngIf="mensajeExito"
+    >
+      {{ mensajeExito }}
+    </p>
+  </div>
+
+</div>

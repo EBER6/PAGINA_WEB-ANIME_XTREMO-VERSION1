@@ -20,13 +20,22 @@ export class Catalogo implements OnInit {
   categoriaSeleccionada = 'todos';
 
   categorias: string[] = [
-    'todos',
-    'figuras',
-    'polos',
-    'accesorios',
-    'posters',
-    'llaveros',
-    'ofertas'
+    'TODOS',
+    'FIGURAS',
+    'ACCESPRIOS',
+    'POSTERS',
+    'LLAVEROS',
+    'OFERTAS',
+    'PULSERAS',
+    'COLLARES',
+    'CORREAS',
+    'TASAS',
+    'PELUCHES',
+    'POLOS',
+    'CASACAS',
+    'PANTALONES'
+
+
   ];
 
   constructor(
